@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Translating and Validating Loss Aversion for Cyber Security",
+    "url": "https://hdl.handle.net/10125/111542",
+    "authors": ["Siyu Deng", "Mohammad Taneem Bin Nazim", "Danilo Romero", "Sridhar Venkatesan", "Palvi Aggarwal", "Christopher D. Kiekintveld"],
+    "venue": "HICSS",
+    "year": "2026",
+    "citations": 3
+  },
+  {
+    "title": "Understanding Cyber Attackers Through Behavioral Science: A Systematic Study of the Representativeness Heuristic",
+    "url": "https://doi.org/10.1109/CAI64502.2025.00198",
+    "authors": ["Mohammad Taneem Bin Nazim", "Siyu Deng", "Danilo Romero", "Sridhar Venkatesan", "Jonathan Pfautz", "Prashanth Rajivan", "Cleotilde Gonzalez", "Christopher Kiekintveld", "Palvi Aggarwal"],
+    "venue": "CAI",
+    "year": "2025",
+    "citations": 7
+  },
+  {
+    "title": "Evolution of Quantum Computing: A Systematic Survey on the Use of Quantum Computing Tools",
+    "url": "https://arxiv.org/abs/2204.01856",
+    "authors": ["Paramita Basak Upama", "Md Jobair Hossain Faruk", "Mohammad Nazim", "Mohammad Masum", "Hossain Shahriar", "Gias Uddin", "Shabir Barzanjeh", "Sheikh Iqbal Ahamed", "Akond Rahman"],
+    "venue": "COMPSAC",
+    "year": "2022",
+    "citations": 103,
+    "note": "Combined citation count from three entries (94 + 7 + 2)."
+  },
+  {
+    "title": "Quantum Machine Learning for Software Supply Chain Attacks: How Far Can We Go?",
+    "url": "https://arxiv.org/abs/2204.02784",
+    "authors": ["Mohammad Masum", "Mohammad Nazim", "Md Jobair Hossain Faruk", "Hossain Shahriar", "Maria Valero", "Md Abdullah Hafiz Khan", "Gias Uddin", "Shabir Barzanjeh", "Erhan Saglamyurek", "Akond Rahman", "Sheikh Iqbal Ahamed"],
+    "venue": "COMPSAC",
+    "year": "2022",
+    "citations": 39
+  },
+  {
+    "title": "IEEE 46th Annual Computers, Software, and Applications Conference (COMPSAC)",
+    "url": "",
+    "authors": ["Paramita Basak Upama", "Md Jobair Hossain Faruk", "Mohammad Nazim", "Mohammad Masum", "Hossain Shahriar", "Gias Uddin", "et al."],
+    "venue": "COMPSAC",
+    "year": "2022",
+    "citations": 18,
+    "note": "Listed under the conference title in Google Scholar. The specific paper title is unconfirmed."
+  },
+  {
+    "title": "Systematic Analysis of Deep Learning Model for Vulnerable Code Detection",
+    "url": "https://doi.org/10.1109/COMPSAC54236.2022.00281",
+    "authors": ["Mohammad Taneem Bin Nazim", "Md Jobair Hossain Faruk", "Hossain Shahriar", "Md Abdullah Khan", "Mohammad Masum", "Nazmus Sakib", "Fan Wu"],
+    "venue": "COMPSAC",
+    "year": "2022",
+    "citations": 17
+  }
+]
