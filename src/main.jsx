@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { FaGithub, FaLinkedin, FaMoon, FaSun } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
 import { profile } from './profile';
+import PageContent from './PageContent';
 import './styles.css';
 
 const socialLinks = [
@@ -11,19 +12,30 @@ const socialLinks = [
   { key: 'linkedin', label: 'LinkedIn', icon: FaLinkedin },
 ];
 
+const pageNames = { research: 'Research', work: 'Work', teaching: 'Teaching', projects: 'Projects' };
+
+function currentPage() {
+  const page = window.location.hash.slice(1);
+  return Object.hasOwn(pageNames, page) ? page : 'home';
+}
+
 function App() {
   const [theme, setTheme] = useState(document.documentElement.dataset.theme);
   const [progress, setProgress] = useState(0);
   const [photoFailed, setPhotoFailed] = useState(false);
-  const [publicationSort, setPublicationSort] = useState('year');
+  const [page, setPage] = useState(currentPage);
 
-  const sortedPublications = [...profile.publications].sort((first, second) => {
-    const yearDifference = (Number(second.year) || 0) - (Number(first.year) || 0);
-    const citationDifference = (second.citations ?? 0) - (first.citations ?? 0);
-    return publicationSort === 'citations'
-      ? citationDifference || yearDifference
-      : yearDifference || citationDifference;
-  });
+  useEffect(() => {
+    const navigate = () => setPage(currentPage());
+    window.addEventListener('hashchange', navigate);
+    return () => window.removeEventListener('hashchange', navigate);
+  }, []);
+
+  useEffect(() => {
+    document.title = page === 'home' ? profile.name : `${pageNames[page]} | ${profile.name}`;
+    document.getElementById('page-title')?.focus({ preventScroll: true });
+    window.scrollTo(0, 0);
+  }, [page]);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -53,18 +65,27 @@ function App() {
 
   return (
     <>
-      <a className="skip-link" href="#main">Skip to content</a>
+      <a className="skip-link" href="#main" onClick={(event) => {
+        event.preventDefault();
+        document.getElementById('main')?.focus();
+      }}>Skip to content</a>
       <header className="topbar">
         <div className="container topbar-inner">
-          <button
-            className="theme-toggle"
-            type="button"
-            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
-            title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          >
-            {theme === 'dark' ? <FaSun aria-hidden="true" /> : <FaMoon aria-hidden="true" />}
-          </button>
+          <a className="header-name" href="#home" aria-label={`${profile.name}, home`}>{profile.name}</a>
+          <nav className="header-nav" aria-label="Main navigation">
+            {Object.entries(pageNames).map(([id, label]) => (
+              <a className="header-link" key={id} href={`#${id}`} aria-current={page === id ? 'page' : undefined}>{label}</a>
+            ))}
+            <button
+              className="theme-toggle"
+              type="button"
+              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+              title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
+              {theme === 'dark' ? <FaSun aria-hidden="true" /> : <FaMoon aria-hidden="true" />}
+            </button>
+          </nav>
         </div>
         <div className="reading-progress" style={{ transform: `scaleX(${progress})` }} aria-hidden="true" />
       </header>
@@ -100,54 +121,7 @@ function App() {
         </aside>
 
         <div className="about-content">
-          <header className="intro">
-            <h1>{profile.name}</h1>
-            {profile.affiliation && <p className="affiliation">{profile.affiliationUrl ? <a href={profile.affiliationUrl}>{profile.affiliation}</a> : profile.affiliation}</p>}
-          </header>
-          <div className="biography">
-            {profile.biography.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          </div>
-
-          {profile.news.length > 0 && <section aria-labelledby="news-title">
-            <h2 id="news-title">News</h2>
-            <dl className="news-list">
-              {profile.news.map((item) => (
-                <div className="news-item" key={`${item.date}-${item.text}`}>
-                  <dt><time dateTime={item.date}>{new Date(`${item.date}T12:00:00`).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })}</time></dt>
-                  <dd>{item.text}</dd>
-                </div>
-              ))}
-            </dl>
-          </section>}
-
-          <section aria-labelledby="publications-title">
-            <div className="publications-heading">
-              <h2 id="publications-title">Publications</h2>
-              {profile.publications.length > 0 && <div className="publication-sort">
-                <label htmlFor="publication-sort">Sort by</label>
-                <select id="publication-sort" value={publicationSort} onChange={(event) => setPublicationSort(event.target.value)} aria-controls="publication-list">
-                  <option value="year">Year (newest first)</option>
-                  <option value="citations">Citations (highest first)</option>
-                </select>
-              </div>}
-            </div>
-            {profile.links.scholar && <p>For the full list of publications, see my <a href={profile.links.scholar} target="_blank" rel="noopener noreferrer">Google Scholar profile</a>.</p>}
-            {profile.publications.length > 0 ? (
-              <ol id="publication-list" className="publications">
-                {sortedPublications.map((publication) => (
-                  <li className="publication" key={publication.title}>
-                    <div><span className="venue-badge">{publication.venue}</span></div>
-                    <div>
-                      <div className="publication-title">{publication.url ? <a href={publication.url} target="_blank" rel="noopener noreferrer">{publication.title}</a> : publication.title}</div>
-                      <div><em>{publication.venue} {publication.year}</em></div>
-                      {publication.citations != null && <div className="publication-citations">Cited by {publication.citations}</div>}
-                      {publication.note && <div className="publication-note">{publication.note}</div>}
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            ) : <p className="placeholder-copy">Publications will be added here.</p>}
-          </section>
+          <PageContent page={page} />
         </div>
       </main>
     </>

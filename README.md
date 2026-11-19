@@ -2,6 +2,8 @@
 
 A static React portfolio following the layout of https://npkalinin.github.io/.
 
+The header opens Research, Work, Teaching, and Projects views using URL hashes supported by GitHub Pages. The name links home. Research includes publications, and the homepage also shows the publication list. View content is stored in `src/assets/content.json`.
+
 ## Run locally
 
 ```sh

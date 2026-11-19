@@ -1,0 +1,66 @@
+{
+  "research": {
+    "overview": "My research connects human behavior, cybersecurity experimentation, and agentic artificial intelligence. I study how people and AI agents interpret evidence and make decisions during cybersecurity tasks, and how these observations can inform adaptive defenses whose decisions can be understood and evaluated experimentally.",
+    "interests": [
+      "Human factors and cognitive biases in attacker decision-making",
+      "Cybersecurity testbeds and controlled behavioral experiments",
+      "Agentic AI workflows, execution trace analysis, and human-in-the-loop decision support",
+      "Evidence-based monitoring and adaptive cyber defense"
+    ]
+  },
+  "work": [
+    {
+      "role": "Cybersecurity Software Developer and Research Lead",
+      "organization": "The University of Texas at El Paso",
+      "period": "January 2023 – Present",
+      "description": "I develop cybersecurity testbeds and agentic AI workflows for cyber operations. My work includes leading HackIT 2.0 development and collaborating with psychologists to study how attacker cognitive biases can inform cyber defenses."
+    },
+    {
+      "role": "AI/ML Engineer",
+      "organization": "Handshake MOVE Fellowship Program",
+      "period": "August 2025 – Present",
+      "description": "I work on improving LLM performance through prompt engineering, dataset curation, and evaluation. This includes reviewing and refining training and test datasets for fine-tuning and supervised training."
+    },
+    {
+      "role": "Machine Learning Engineer and Research Lead",
+      "organization": "Kennesaw State University",
+      "period": "January 2022 – July 2022",
+      "description": "I developed machine learning tools for infrastructure analysis and worked on quantum machine learning approaches for detecting software vulnerabilities."
+    }
+  ],
+  "teaching": {
+    "role": "Associate Instructor of Computer Science",
+    "organization": "The University of Texas at El Paso",
+    "period": "August 2024 – Present",
+    "philosophy": [
+      "I believe every student can learn. My responsibility is to make challenging ideas accessible, provide meaningful practice, and help students approach unfamiliar problems with confidence. I adapt explanations, examples, and pace to students' backgrounds and technical experience.",
+      "I introduce unfamiliar concepts through familiar situations, then connect them to formal representations and practical applications. Questions, brief exercises, and constructive feedback help students build understanding and become independent learners."
+    ],
+    "courses": [
+      { "code": "CS 1301", "title": "Introduction to Computer Science" },
+      { "code": "CS 1320", "title": "Computer Programming for Scientists and Engineers" },
+      { "code": "CS 3331", "title": "Advanced Object-Oriented Programming" },
+      { "code": "CS 6352", "title": "Computer Security" }
+    ]
+  },
+  "projects": [
+    {
+      "name": "HackIT 2.0",
+      "period": "October 2023 – Present",
+      "description": "I lead the development of an interactive cybersecurity testbed supporting dynamic Metasploit simulations. The platform records decisions, response times, and errors to support controlled studies of attacker behavior and cognitive biases during reconnaissance and exploitation.",
+      "technologies": "React, TypeScript, MERN stack, Metasploit"
+    },
+    {
+      "name": "Cyber-Agent-Flow",
+      "period": "September 2025 – Present",
+      "description": "I developed a framework for examining how AI agents plan, execute tools, observe results, and optimize cybersecurity workflows. Instrumented execution traces support analysis of agent behavior, workflow bottlenecks, and the effects of human input and tool interactions.",
+      "technologies": "Agentic AI, LLMs, execution trace analysis, Metasploit, Proxmox"
+    },
+    {
+      "name": "Watcher Agent",
+      "period": "June 2026 – Present",
+      "description": "I am developing a pipeline and web interface that organize network, host, sensor, and operator evidence into time-based windows for LLM-generated cybersecurity observation reports. The project investigates how this evidence can support interpretation of attacker activity and defensive recommendations.",
+      "technologies": "Agentic AI, LLMs, cybersecurity evidence analysis"
+    }
+  ]
+}

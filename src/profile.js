@@ -12,7 +12,7 @@ export const profile = {
   affiliationUrl: '',
   email: 'mtnazim@miners.utep.edu',
   biography: [
-    'I am a Ph.D. student in Computer Science at The University of Texas at El Paso (UTEP), working under the supervision of Dr. Palvi Aggarwal. My research connects human behavior, cybersecurity experimentation, and agentic AI, with a focus on understanding attacker decision-making and developing adaptive cyber defenses.',
+    'I am a Ph.D. candidate in Computer Science at The University of Texas at El Paso (UTEP), working at PsyberSecurity Lab under the supervision of Dr. Palvi Aggarwal. My research connects human behavior, cybersecurity experimentation, and agentic AI, with a focus on understanding attacker decision-making and developing adaptive cyber defenses.',
     'I lead the development of HackIT 2.0, an interactive cybersecurity testbed for studying attacker behavior and cognitive biases. My work on Cyber-Agent-Flow examines how AI agents plan, use tools, and interact with human input through execution trace analysis. In my ongoing Watcher Agent project, I use LLMs to interpret evidence from cybersecurity activity and support defensive recommendations.',
     'Alongside my research, I serve as an Associate Instructor of Computer Science at UTEP. My teaching emphasizes clear explanations, familiar examples, and practical exercises that help students build confidence and solve unfamiliar problems.',
   ],
