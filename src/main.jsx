@@ -141,7 +141,6 @@ function App() {
                     <div><span className="venue-badge">{publication.venue}</span></div>
                     <div>
                       <div className="publication-title">{publication.url ? <a href={publication.url} target="_blank" rel="noopener noreferrer">{publication.title}</a> : publication.title}</div>
-                      <div>{publication.authors.map((author, index) => <span key={`${author}-${index}`}>{index > 0 && ', '}{author === profile.name ? <em className="own-name">{author}</em> : author}</span>)}</div>
                       <div><em>{publication.venue} {publication.year}</em></div>
                       {publication.citations != null && <div className="publication-citations">Cited by {publication.citations}</div>}
                       {publication.note && <div className="publication-note">{publication.note}</div>}

@@ -70,7 +70,6 @@ h2 { font-size: 32px; font-weight: 300; scroll-margin-top: 72px; }
 .publication-title { font-weight: 500; }
 .publication-citations { margin-top: 4px; color: var(--muted); font-size: 14px; }
 .publication-note { color: var(--muted); font-size: 14px; }
-.own-name { font-style: normal; border-bottom: 1px solid currentColor; }
 .skip-link { position: fixed; top: -100px; left: 16px; z-index: 20; padding: 8px 16px; background: var(--background); }
 .skip-link:focus { top: 8px; }
 
