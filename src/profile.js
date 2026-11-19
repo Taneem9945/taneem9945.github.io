@@ -8,12 +8,13 @@ export const profile = {
   name: 'Mohammad Taneem Bin Nazim',
   initials: 'MT',
   photo: 'portrait.jpg',
-  affiliation: '',
+  affiliation: 'The University of Texas at El Paso',
   affiliationUrl: '',
-  email: '',
+  email: 'mtnazim@miners.utep.edu',
   biography: [
-    'Biography coming soon.',
-    'More about my background, interests, and current work will be shared here.',
+    'I am a Ph.D. student in Computer Science at The University of Texas at El Paso (UTEP), working under the supervision of Dr. Palvi Aggarwal. My research connects human behavior, cybersecurity experimentation, and agentic AI, with a focus on understanding attacker decision-making and developing adaptive cyber defenses.',
+    'I lead the development of HackIT 2.0, an interactive cybersecurity testbed for studying attacker behavior and cognitive biases. My work on Cyber-Agent-Flow examines how AI agents plan, use tools, and interact with human input through execution trace analysis. In my ongoing Watcher Agent project, I use LLMs to interpret evidence from cybersecurity activity and support defensive recommendations.',
+    'Alongside my research, I serve as an Associate Instructor of Computer Science at UTEP. My teaching emphasizes clear explanations, familiar examples, and practical exercises that help students build confidence and solve unfamiliar problems. I previously worked as a Power Systems Research Intern at Pacific Northwest National Laboratory, developing software for anomaly detection and analysis of power-grid data.',
   ],
   links,
   // Add entries with date (YYYY-MM-DD) and text.

@@ -15,6 +15,8 @@ Edit `src/profile.js` to add your biography, affiliation, email, and news. Profe
 
 Place your portrait and CV in `public/`. For example, add `photo.jpg` and `cv.pdf`, then set `photo: 'photo.jpg'` in `src/profile.js` and `"cv": "cv.pdf"` in `src/assets/links.json`. Use relative paths without a leading slash so assets work on both account and project Pages sites.
 
+The current CV links to the supplied résumé at `public/documents/Nazim_Resume_26_Ind.pdf`. Original copies of the résumé, research statement, and teaching philosophy are retained locally in the Git-ignored `documents/` folder. The biography in `src/profile.js` draws on these three sources.
+
 News entries use this shape.
 
 ```js
