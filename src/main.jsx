@@ -122,7 +122,7 @@ function App() {
 
           <section aria-labelledby="publications-title">
             <div className="publications-heading">
-              <h2 id="publications-title">Selected Publications</h2>
+              <h2 id="publications-title">Publications</h2>
               {profile.publications.length > 0 && <div className="publication-sort">
                 <label htmlFor="publication-sort">Sort by</label>
                 <select id="publication-sort" value={publicationSort} onChange={(event) => setPublicationSort(event.target.value)} aria-controls="publication-list">
