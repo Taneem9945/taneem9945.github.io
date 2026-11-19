@@ -108,19 +108,17 @@ function App() {
             {profile.biography.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
 
-          <section aria-labelledby="news-title">
+          {profile.news.length > 0 && <section aria-labelledby="news-title">
             <h2 id="news-title">News</h2>
-            {profile.news.length > 0 ? (
-              <dl className="news-list">
-                {profile.news.map((item) => (
-                  <div className="news-item" key={`${item.date}-${item.text}`}>
-                    <dt><time dateTime={item.date}>{new Date(`${item.date}T12:00:00`).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })}</time></dt>
-                    <dd>{item.text}</dd>
-                  </div>
-                ))}
-              </dl>
-            ) : <p className="placeholder-copy">Updates coming soon.</p>}
-          </section>
+            <dl className="news-list">
+              {profile.news.map((item) => (
+                <div className="news-item" key={`${item.date}-${item.text}`}>
+                  <dt><time dateTime={item.date}>{new Date(`${item.date}T12:00:00`).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })}</time></dt>
+                  <dd>{item.text}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>}
 
           <section aria-labelledby="publications-title">
             <div className="publications-heading">
